@@ -1,0 +1,285 @@
+---
+import "../styles/site.css";
+
+const packetUrl = "/assets/packet/neo-mall-2026-information-packet.pdf";
+
+const programs = [
+  {
+    number: "01",
+    title: "Play",
+    body: "Water park, wave pool, arcade, bowling, skate, courts.",
+  },
+  {
+    number: "02",
+    title: "Stay",
+    body: "Grass courtyard, shaded seating, cafes, WiFi, bathrooms.",
+  },
+  {
+    number: "03",
+    title: "Eat",
+    body: "Food court, cafes, small vendors, flexible patio dining.",
+  },
+  {
+    number: "04",
+    title: "Shop",
+    body: "Convenience, fun shops, tattoo and piercing, useful extras.",
+  },
+  {
+    number: "05",
+    title: "Return",
+    body: "Free entry and daily usefulness make repeat visits natural.",
+  },
+];
+
+const principles = [
+  ["Free Commons", "Entry, lawns, walkways, seating, WiFi zones, shade, and bathrooms remain free to use."],
+  ["Paid Destinations", "Theater, bowling, arcade, water attractions, food, shops, services, and events generate revenue."],
+  ["Weather Resilience", "Covered promenades, indoor and outdoor flexibility, and winter closures protect the day."],
+  ["All-Day Comfort", "Bathrooms, family restrooms, lockers, charging rooms, first aid, security, and shade are core infrastructure."],
+  ["Compact Scale", "The larger resort image is condensed into a destination that feels alive and casual."],
+  ["Repeat Value", "Useful daily stops plus fun destination turns occasional visits into habits."],
+];
+
+const moments = [
+  ["page-05", "Arrival Moment", "A public front door that feels like a place, not a parking lot."],
+  ["page-06", "Covered Promenade", "A comfort engine for shops, cafes, seating, and bad-weather flexibility."],
+  ["page-07", "Grass Courtyard", "The social center: green, controlled, visible, and intentionally programmed."],
+  ["page-08", "Wave Pool Feature", "A memorable courtyard anchor without letting water become the whole identity."],
+  ["page-10", "Night Economy", "Warm lights, food, games, entertainment, and safe walking paths past shopping hours."],
+  ["page-11", "Active Edge", "Courts, skate, trail, and optional hotel uses broaden the audience without diluting the core."],
+];
+
+const dayPlan = [
+  ["10:30", "Coffee and laptop under the roof"],
+  ["12:00", "Lunch, picnic tables, kids on the grass"],
+  ["2:00", "Wave pool or water park"],
+  ["4:30", "Skate park, courts, trail loop"],
+  ["6:00", "Food court, arcade, bowling"],
+  ["8:00", "Movie, dessert, walk out safely"],
+];
+
+const gallery = [
+  ["page-01", "Neo Mall 2026 cover rendering"],
+  ["page-02", "The big move concept board"],
+  ["page-04", "Master vision aerial rendering"],
+  ["page-05", "Arrival moment rendering"],
+  ["page-06", "Covered promenade rendering"],
+  ["page-07", "Grass courtyard rendering"],
+  ["page-08", "Wave pool feature rendering"],
+  ["page-09", "Open water edge rendering"],
+  ["page-10", "Night economy rendering"],
+  ["page-11", "Active edge rendering"],
+  ["page-12", "Day without a plan diagram"],
+  ["page-14", "Mall as a daily resort rendering"],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Neo Mall 2026 | Daily Resort Town Square</title>
+    <meta
+      name="description"
+      content="Neo Mall 2026 reframes the mall as a free-to-enter daily resort: food, play, water, entertainment, work, and community in one compact destination."
+    />
+    <meta property="og:title" content="Neo Mall 2026" />
+    <meta
+      property="og:description"
+      content="A free-to-enter resort-style town square built around food, play, water, entertainment, work, and community."
+    />
+    <meta property="og:image" content="/assets/renderings/hero-courtyard.webp" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand-mark" href="#top" aria-label="Neo Mall home">
+        <span>Neo</span>
+        <span>Mall</span>
+      </a>
+      <nav>
+        <a href="#vision">Vision</a>
+        <a href="#program">Program</a>
+        <a href="#layout">Layout</a>
+        <a href="#packet">Packet</a>
+      </nav>
+      <a class="header-action" href={packetUrl}><span class="header-action-full">Download </span>PDF</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-dark">
+        <picture>
+          <source srcset="/assets/renderings/hero-courtyard.webp" type="image/webp" />
+          <img src="/assets/renderings/hero-courtyard.webp" alt="Neo Mall resort courtyard with water, lawn, dining, and entertainment uses" />
+        </picture>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Information Packet / Concept Vision</p>
+          <h1><span>Neo</span><span>Mall</span><span>2026</span></h1>
+          <p class="hero-copy">
+            A free-to-enter resort-style town square built around food, play, water,
+            entertainment, work, and community.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#vision">Explore the vision</a>
+            <a class="button button-secondary" href={packetUrl}>Open packet</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="positioning" aria-label="Core positioning">
+        <div class="positioning-copy">
+          <p class="eyebrow">The Big Move</p>
+          <h2>Do not save retail.<br />Save the<br />destination.</h2>
+        </div>
+        <p>
+          Neo Mall reframes the mall as a daily-use resort: free common areas,
+          paid experiences, and enough variety that people can arrive without a plan
+          and still stay for hours.
+        </p>
+      </section>
+
+      <section id="vision" class="section split-section">
+        <div class="section-kicker">01 / Master Vision</div>
+        <div class="section-copy">
+          <h2>A C-shaped destination campus, open to water and wrapped by covered promenades.</h2>
+          <p>
+            The mall is not a closed box. It is a roofed arcade around a designed
+            courtyard, with the left side open to the water park and the right side
+            anchored by entertainment.
+          </p>
+        </div>
+        <figure class="wide-figure">
+          <img src="/assets/renderings/page-04.webp" alt="Aerial master vision of the Neo Mall C-shaped campus" loading="lazy" />
+        </figure>
+      </section>
+
+      <section id="program" class="section program-section">
+        <div class="section-heading">
+          <p class="eyebrow">The Program Stack</p>
+          <h2>A compact set of anchors that reinforce each other instead of fighting for foot traffic.</h2>
+        </div>
+        <div class="program-grid">
+          {programs.map((program) => (
+            <article class="program-card">
+              <span>{program.number}</span>
+              <h3>{program.title}</h3>
+              <p>{program.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="section moments-section">
+        <div class="section-heading">
+          <p class="eyebrow">Destination Moments</p>
+          <h2>The pieces that make the place feel active all day.</h2>
+        </div>
+        <div class="moments-grid">
+          {moments.map(([imageId, title, body], index) => (
+            <article class="moment-card">
+              <img
+                src={`/assets/renderings/${imageId}-thumb.webp`}
+                alt=""
+                loading="lazy"
+              />
+              <div>
+                <span>{String(index + 2).padStart(2, "0")}</span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="layout" class="section layout-section">
+        <div class="layout-copy">
+          <p class="eyebrow">Concept Layout</p>
+          <h2>Free commons in the middle. Revenue uses on the edges. Water as the left-side draw.</h2>
+          <p>
+            Covered seating protects the daily rhythm, while food, cafes, shops,
+            entertainment, arcade, bowling, and theater activate the perimeter.
+          </p>
+        </div>
+        <figure class="layout-frame">
+          <img src="/assets/renderings/neo-mall-layout.webp" alt="Neo Mall 2026 layout diagram" loading="lazy" />
+        </figure>
+      </section>
+
+      <section class="section day-section">
+        <div class="day-panel">
+          <p class="eyebrow">A Day Without A Plan</p>
+          <h2>Enough variety to arrive casually and stay naturally.</h2>
+          <ol class="day-list">
+            {dayPlan.map(([time, activity]) => (
+              <li>
+                <time>{time}</time>
+                <span>{activity}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <img src="/assets/renderings/page-12.webp" alt="Diagram showing a day without a plan at Neo Mall" loading="lazy" />
+      </section>
+
+      <section class="section principles-section">
+        <div class="section-heading">
+          <p class="eyebrow">Operating Principles</p>
+          <h2>The boring stuff is what lets the fun stuff work all day.</h2>
+        </div>
+        <div class="principles-grid">
+          {principles.map(([title, body]) => (
+            <article class="principle-card">
+              <h3>{title}</h3>
+              <p>{body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="section final-section section-dark">
+        <img src="/assets/renderings/page-14.webp" alt="Elevated rendering of Neo Mall as a daily resort" loading="lazy" />
+        <div class="final-copy">
+          <p class="eyebrow">The Mall As A Daily Resort</p>
+          <h2>A place you can enter for free, stay without pressure, and spend only when you choose.</h2>
+          <p>
+            Neo Mall is not retail with decorations. It is a community destination
+            with food, water, play, work, movement, comfort, and entertainment
+            arranged so each part makes the others stronger.
+          </p>
+        </div>
+      </section>
+
+      <section id="packet" class="section packet-section">
+        <div class="section-heading">
+          <p class="eyebrow">Concept Packet</p>
+          <h2>Original boards, renderings, and diagrams.</h2>
+        </div>
+        <div class="packet-actions">
+          <a class="button button-primary" href={packetUrl}>Download full packet</a>
+        </div>
+        <div class="gallery-grid">
+          {gallery.map(([id, alt]) => (
+            <a class="gallery-card" href={`/assets/renderings/${id}.webp`} aria-label={`Open ${alt}`}>
+              <img src={`/assets/renderings/${id}-thumb.webp`} alt={alt} loading="lazy" />
+            </a>
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Neo Mall 2026</p>
+      <a href={packetUrl}>Information packet</a>
+    </footer>
+  </body>
+</html>
