@@ -420,7 +420,15 @@ h3 {
 .rhythm-visual {
   min-height: 760px;
   margin-left: max(-24px, calc((1180px - 100vw) / 2));
-  padding-left: max(24px, calc((100vw - 1180px) / 2));
+  padding: 96px clamp(32px, 5vw, 72px);
+}
+
+.rhythm-visual .scene-copy {
+  width: min(560px, 100%);
+}
+
+.rhythm-visual h2 {
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
 }
 
 .rhythm-visual::after {
@@ -517,7 +525,7 @@ h3 {
 
   .rhythm-visual {
     margin-right: max(-24px, calc((1180px - 100vw) / 2));
-    padding-right: max(24px, calc((100vw - 1180px) / 2));
+    padding: 96px max(24px, calc((100vw - 1180px) / 2));
   }
 
   .day-list {
