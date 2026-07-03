@@ -15,3 +15,11 @@ Decision: Use the PDF packet's rendering style, colors, and conceptual language 
 Rationale: The supplied packet already defines a strong brand direction and avoids a generic commercial real-estate look.
 
 Consequences: Site copy stays concept-focused and avoids unsupported factual claims.
+
+## 2026-07-03: Scene-First Public Site
+
+Decision: Present the concept as composed HTML sections over optimized scene images rather than linking to the source PDF or raw image files.
+
+Rationale: The public site should feel like a polished web expression of the concept, not a document viewer or file gallery.
+
+Consequences: The site keeps text accessible and responsive while using the renderings as immersive section backgrounds.

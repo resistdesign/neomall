@@ -1,6 +1,6 @@
-# Neo Mall 2026
+# Neo Mall
 
-Astro site for the Neo Mall 2026 concept presentation.
+Astro site for the Neo Mall concept presentation.
 
 ## Commands
 

@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://neomall.resist.design/sitemap.xml
